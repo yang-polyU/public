@@ -16,6 +16,6 @@ from shapes import Frustum
 # graph = Pyramid(0, 0, 0, 10, 10, 10, 5, 5)
 # graph.reconstruction()
 
-graph = Frustum(0, 0, 0, 20, 20, 20, 10, 10, 5, 5)
-graph.reconstruction()
+# graph = Frustum(0, 0, 0, 20, 20, 20, 10, 10, 5, 5)
+# graph.reconstruction()
 
