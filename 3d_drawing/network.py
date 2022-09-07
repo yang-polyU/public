@@ -42,7 +42,7 @@ class Net(nn.Module):
             num_features *= s
         return num_features
 
-# model = Net()
+# model = Net().to(device)
 # print(model)
 
 # input = torch.randn(1, 1, 32, 32)
