@@ -10,9 +10,10 @@ def test(model, device, test_loader):
     correct = 0
     with torch.no_grad():                                        #forbid gradient calculation
         for data, label in test_loader:                          #iterate over a batch of data from the data loader
-            data, label = data.to(device), label.to(device)
+            data, label = data.to(device), label.to(device)      #store the data to cpu or gpu
             output = model(data)
-            test_loss += F.nll_loss(output, label, reduction = 'sum').item()#sum up batch loss
+            #sum up batch loss
+            test_loss += F.nll_loss(output, label, reduction = 'sum').item()
             pred = output.max(1, keepdim = True)[1]              #get the index of the max log-probability
             correct += pred.eq(label.view_as(pred)).sum().item() #Counting the number of correct predictions
 
